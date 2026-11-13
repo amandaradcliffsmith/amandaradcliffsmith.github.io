@@ -12,3 +12,6 @@ vendor/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Local Claude Code guidance (not published)
+CLAUDE.md

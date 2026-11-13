@@ -1,0 +1,20 @@
+title: Stop Math Mimicking
+description: Coming soon from Radcliff-Smith Consulting.
+url: "https://stopmathmimicking.com"
+baseurl: ""
+lang: en-US
+
+markdown: kramdown
+
+# Both plugins are on GitHub Pages' supported list.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Keep repo housekeeping files out of the published site.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
