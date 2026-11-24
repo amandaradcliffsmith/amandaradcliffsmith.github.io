@@ -14,12 +14,24 @@
     </div>
     <div class="signup__panel">
       {% if signup.form_action and signup.form_action != "" %}
-      <form class="signup__form" action="{{ signup.form_action }}" method="post">
-        <label for="signup-email">Your email</label>
-        <div class="signup__row">
-          <input id="signup-email" type="email" name="{{ signup.email_field | default: 'email' }}" autocomplete="email" placeholder="you@school.org" required>
-          <button class="btn btn--yellow" type="submit">Start the 5 days</button>
+      <form class="signup__form" action="{{ signup.form_action }}" method="post" accept-charset="UTF-8">
+        {% for field in signup.hidden_fields %}<input type="hidden" name="{{ field[0] }}" value="{{ field[1] }}">
+        {% endfor %}
+        {% if signup.name_field and signup.name_field != "" %}
+        <div class="signup__field">
+          <label for="signup-name">First name</label>
+          <input id="signup-name" type="text" name="{{ signup.name_field }}" autocomplete="given-name" required>
         </div>
+        {% endif %}
+        <div class="signup__field">
+          <label for="signup-email">Email</label>
+          <input id="signup-email" type="email" name="{{ signup.email_field | default: 'email' }}" autocomplete="email" placeholder="you@school.org" required>
+        </div>
+        <button class="btn btn--yellow signup__submit" type="submit">Start the 5 days</button>
+        <p class="signup__fine">
+          {% if signup.privacy_url %}We respect your <a href="{{ signup.privacy_url }}" rel="noopener nofollow" target="_blank">email privacy</a>. {% endif %}Powered by <a href="https://www.aweber.com" rel="noopener" target="_blank">AWeber</a>.
+        </p>
+        {% if signup.display_pixel %}<img class="signup__pixel" src="{{ signup.display_pixel }}" alt="" width="1" height="1">{% endif %}
       </form>
       {% else %}
       <p class="badge">Opening soon</p>

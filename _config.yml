@@ -23,15 +23,28 @@ links:
   linkedin: https://www.linkedin.com/in/dr-amanda-radcliff-smith-edd-96813851/
   youtube: ""
 
-# Email sign-up for "5 Days to Stop Math Mimicking".
-# Leave form_action empty until an email platform is chosen; the sign-up
-# block then shows an "opening soon" message.
-#   Kit:        form_action = the form's action URL, email_field = email_address
-#   MailerLite: form_action = the form's action URL, email_field = fields[email]
-#   Mailchimp:  form_action = the form's action URL, email_field = EMAIL
+# Email sign-up for "5 Days to Stop Math Mimicking", powered by AWeber
+# (web form 959390808 on list awlist6987623).
+# If form_action is empty, the sign-up block shows an "opening soon" message.
 signup:
-  form_action: ""
+  form_action: https://www.aweber.com/scripts/addlead.pl
+  name_field: name          # leave empty to drop the first-name box
   email_field: email
+  # Sent with every sign-up, exactly as AWeber's form generator set them.
+  # Both redirects point to this site's own confirm-your-email page (/thanks/).
+  hidden_fields:
+    meta_web_form_id: "959390808"
+    meta_split_id: ""
+    listname: awlist6987623
+    redirect: https://stopmathmimicking.com/thanks/
+    meta_redirect_onlist: https://stopmathmimicking.com/thanks/
+    meta_adtracking: My_Web_Form
+    meta_message: "1"
+    meta_required: name,email
+    meta_tooltip: ""
+  # AWeber's form-view counter (shows "displays" in AWeber's form stats).
+  display_pixel: https://forms.aweber.com/form/displays.htm?id=nKyczJwMHAwc
+  privacy_url: https://www.aweber.com/permission.htm
 
 # ---- Build settings ----
 

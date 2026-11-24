@@ -989,20 +989,23 @@ a:hover {
   background: rgba(255, 247, 238, 0.06);
 }
 
+.signup__form {
+  position: relative;
+}
+
+.signup__field {
+  margin-bottom: 1rem;
+}
+
 .signup__form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
-.signup__row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.signup__row input {
-  flex: 1 1 14rem;
+.signup__form input[type="text"],
+.signup__form input[type="email"] {
+  width: 100%;
   min-height: 3.1rem;
   padding: 0.8rem 1rem;
   border: 2px solid transparent;
@@ -1012,9 +1015,40 @@ a:hover {
   font: inherit;
 }
 
-.signup__row input:focus-visible {
+.signup__form input::placeholder {
+  color: var(--dusk);
+  opacity: 0.75;
+}
+
+.signup__form input:focus-visible {
   border-color: var(--yellow);
   outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.35);
+}
+
+.signup__submit {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.signup__fine {
+  margin: 1rem 0 0;
+  color: var(--sage);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.signup__fine a {
+  color: var(--sage);
+}
+
+.signup__pixel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .signup__soon {
