@@ -465,6 +465,12 @@ a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .hero__note {
+    margin-left: 0;
+  }
+}
+
 /* "Student work" card */
 
 .work {
