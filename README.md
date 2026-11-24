@@ -8,7 +8,9 @@ It's a [Jekyll](https://jekyllrb.com/) site that GitHub Pages builds and publish
 
 | To change… | Edit |
 |---|---|
-| Contact email, LinkedIn/YouTube links, founder photo, email sign-up form | `_config.yml` (see the comments there) |
+| Contact email, LinkedIn/YouTube links, founder photo | `_config.yml` (see the comments there) |
+| AWeber sign-up form (list, form ID, redirects) | `signup:` section of `_config.yml` |
+| Page new subscribers see after signing up | `thanks.html` |
 | Teacher testimonials (section appears once the list has entries) | `_data/testimonials.yml` |
 | Talks and press (section on About appears once the list has entries) | `_data/talks.yml` |
 | Menu links | `_data/navigation.yml` |
