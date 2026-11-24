@@ -1,0 +1,65 @@
+---
+layout: page
+title: About
+eyebrow: About
+heading: Why Stop Math Mimicking exists
+intro: Because students who understand why remember how, and every math teacher deserves a practical way to get them there.
+permalink: /about/
+---
+<section class="band band--grid" aria-labelledby="habit-title">
+  <div class="container split">
+    <div class="prose">
+      <h2 id="habit-title">The habit we're breaking</h2>
+      <p>Most of us learned math by watching someone show the steps, then copying them. So that's how we teach: I do, we do, you do. Students get very good at following along, and the understanding never gets built.</p>
+      <p>That's math mimicking. It isn't a teacher problem. It's a habit almost all of us inherited, and habits can change.</p>
+      <p>Stop Math Mimicking helps K–12 math teachers make that change, so their students reason, explain, and make sense of math instead of copying it.</p>
+    </div>
+    <div>
+      <h2>What we believe</h2>
+      <ul class="belief-list">
+        <li><strong>Name the habit, not the teacher.</strong> We were all taught to mimic. Teachers are the solution, not the problem.</li>
+        <li><strong>Sense-making over steps.</strong> Students who understand why remember how.</li>
+        <li><strong>Ready for tomorrow.</strong> Every idea comes with a move a teacher can try in the next lesson.</li>
+        <li><strong>Classroom-tested, research-grounded.</strong> Built in real classrooms and rooted in math education research.</li>
+        <li><strong>From one classroom to a whole district.</strong> The same approach works for a single teacher or a system.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band band--white" aria-labelledby="founder-title">
+  <div class="container founder{% if site.founder.photo and site.founder.photo != "" %} founder--photo{% endif %}">
+    {% if site.founder.photo and site.founder.photo != "" %}
+    <img class="founder__photo" src="{{ site.founder.photo | relative_url }}" alt="{{ site.founder.name }}">
+    {% endif %}
+    <div class="prose">
+      <p class="eyebrow">The founder</p>
+      <h2 id="founder-title">{{ site.founder.name }}{% if site.founder.credentials %}, {{ site.founder.credentials }}{% endif %}</h2>
+      <p>Amanda is a math educator who has worked as a classroom teacher and in math coaching and leadership roles, and she holds a doctorate in education. She speaks and writes about math teaching and learning.</p>
+      <p>Across every one of those roles, she saw the same thing: students who could follow the steps but couldn't say why they worked. Stop Math Mimicking is her answer, a practical, research-grounded way for teachers to move from mimicking to sense-making.</p>
+      {% if site.links.linkedin and site.links.linkedin != "" %}
+      <p><a href="{{ site.links.linkedin }}" rel="noopener">Connect with Amanda on LinkedIn →</a></p>
+      {% endif %}
+      <p class="muted">Stop Math Mimicking is an offering of Radcliff-Smith Consulting.</p>
+    </div>
+  </div>
+</section>
+
+{% assign talks = site.data.talks %}
+{% if talks and talks.size > 0 %}
+<section class="band band--grid" aria-labelledby="talks-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Talks and press</p>
+      <h2 id="talks-title">Where Amanda has spoken and written</h2>
+    </div>
+    <ul class="talks prose">
+      {% for t in talks %}
+      <li>{% if t.url %}<a href="{{ t.url }}" rel="noopener"><strong>{{ t.title }}</strong></a>{% else %}<strong>{{ t.title }}</strong>{% endif %}<br><span class="muted">{{ t.venue }}{% if t.year %}, {{ t.year }}{% endif %}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% include signup.html %}

@@ -1,0 +1,31 @@
+{% assign signup = site.signup %}
+{% assign linkedin = site.links.linkedin %}
+<section class="band band--slate signup" id="signup" aria-labelledby="signup-title">
+  <div class="container signup__grid">
+    <div>
+      <p class="eyebrow">Free email series</p>
+      <h2 id="signup-title">5 Days to Stop Math Mimicking</h2>
+      <p class="lede">One short email a day for five days. Each one brings one idea and one move to try in tomorrow's lesson.</p>
+      <ul class="checks">
+        <li>About five minutes a day</li>
+        <li>Built for K–12 math teachers</li>
+        <li>Free, and you can unsubscribe anytime</li>
+      </ul>
+    </div>
+    <div class="signup__panel">
+      {% if signup.form_action and signup.form_action != "" %}
+      <form class="signup__form" action="{{ signup.form_action }}" method="post">
+        <label for="signup-email">Your email</label>
+        <div class="signup__row">
+          <input id="signup-email" type="email" name="{{ signup.email_field | default: 'email' }}" autocomplete="email" placeholder="you@school.org" required>
+          <button class="btn btn--yellow" type="submit">Start the 5 days</button>
+        </div>
+      </form>
+      {% else %}
+      <p class="badge">Opening soon</p>
+      <p class="signup__soon">The series is almost ready.{% if linkedin and linkedin != "" %} Follow along on LinkedIn to hear the day it opens.{% else %} Check back soon.{% endif %}</p>
+      {% if linkedin and linkedin != "" %}<a class="btn btn--yellow" href="{{ linkedin }}" rel="noopener">Follow on LinkedIn</a>{% endif %}
+      {% endif %}
+    </div>
+  </div>
+</section>

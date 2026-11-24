@@ -1,0 +1,14 @@
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container site-header__inner">
+    {% include wordmark.html %}
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {% for item in site.data.navigation %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+        <li><a class="btn btn--yellow btn--small" href="{{ '/#signup' | relative_url }}">Get the free series</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

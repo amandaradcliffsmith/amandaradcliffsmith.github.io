@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article>
+  <section class="band band--plum page-hero">
+    <div class="container">
+      <p class="eyebrow"><a href="{{ '/resources/' | relative_url }}">Resources</a> · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    </div>
+  </section>
+  <section class="band band--grid">
+    <div class="container">
+      <div class="prose">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+</article>
+{% include signup.html %}

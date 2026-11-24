@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        {% include wordmark.html class="wordmark--footer" %}
+        <p class="site-footer__tagline">{{ site.tagline }}</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          {% for item in site.data.navigation %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endfor %}
+          {% if site.links.linkedin and site.links.linkedin != "" %}<li><a href="{{ site.links.linkedin }}" rel="noopener">LinkedIn</a></li>{% endif %}
+          {% if site.links.youtube and site.links.youtube != "" %}<li><a href="{{ site.links.youtube }}" rel="noopener">YouTube</a></li>{% endif %}
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__meta">
+      <p>A Radcliff-Smith Consulting offering</p>
+      <p>&copy; {{ site.time | date: '%Y' }} Radcliff-Smith Consulting</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+{% assign quotes = site.data.testimonials %}
+{% if quotes and quotes.size > 0 %}
+<section class="band band--white" aria-labelledby="quotes-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">From teachers</p>
+      <h2 id="quotes-title">What teachers say</h2>
+    </div>
+    <div class="cards">
+      {% for q in quotes %}
+      <figure class="card card--quote">
+        <blockquote><p>“{{ q.quote }}”</p></blockquote>
+        <figcaption><strong>{{ q.name }}</strong>{% if q.role %}<br>{{ q.role }}{% endif %}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

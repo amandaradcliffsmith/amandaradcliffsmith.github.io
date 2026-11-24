@@ -1,10 +1,50 @@
 title: Stop Math Mimicking
-description: Coming soon from Radcliff-Smith Consulting.
+tagline: Stop copying steps. Start making sense.
+description: >-
+  Workshops, coaching, and classroom-ready routines that move K–12 math
+  teachers and their students from mimicking to sense-making.
 url: "https://stopmathmimicking.com"
 baseurl: ""
 lang: en-US
 
+# ---- Site settings (edit these) ----
+
+founder:
+  name: Amanda Radcliff-Smith
+  credentials: Ed.D.
+  # Path to a headshot, e.g. /assets/images/amanda.jpg. Leave empty to hide.
+  photo: ""
+
+# Public contact address for the Contact page. Leave empty to show the
+# "contact details coming soon" note instead.
+contact_email: ""
+
+links:
+  linkedin: https://www.linkedin.com/in/dr-amanda-radcliff-smith-edd-96813851/
+  youtube: ""
+
+# Email sign-up for "5 Days to Stop Math Mimicking".
+# Leave form_action empty until an email platform is chosen; the sign-up
+# block then shows an "opening soon" message.
+#   Kit:        form_action = the form's action URL, email_field = email_address
+#   MailerLite: form_action = the form's action URL, email_field = fields[email]
+#   Mailchimp:  form_action = the form's action URL, email_field = EMAIL
+signup:
+  form_action: ""
+  email_field: email
+
+# ---- Build settings ----
+
 markdown: kramdown
+permalink: /resources/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Amanda Radcliff-Smith
 
 # Both plugins are on GitHub Pages' supported list.
 plugins:

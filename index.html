@@ -1,9 +1,122 @@
 ---
 layout: default
 ---
-<main class="hero">
-  <p class="eyebrow">Radcliff-Smith Consulting</p>
-  <h1>{{ site.title }}</h1>
-  <p class="badge">Coming soon</p>
-  <p class="lede">We're putting the finishing touches on something new. Check back soon.</p>
-</main>
+<section class="band band--plum hero">
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow">For K–12 math teachers</p>
+      <h1>You were taught to show the steps. <span class="hl">So were your students.</span></h1>
+      <p class="lede">Stop copying steps. Start making sense. Get <em>5 Days to Stop Math Mimicking</em>, a free email series with one idea and one classroom move a day.</p>
+      <div class="actions">
+        <a class="btn btn--yellow" href="#signup">Get the free series</a>
+        <a href="{{ '/workshops/' | relative_url }}">Bring it to your school →</a>
+      </div>
+      <span class="hero__note">{% include note.html text="free, and about five minutes a day" tone="rose" %}</span>
+    </div>
+
+    <figure class="work">
+      <figcaption class="sr-only">An example problem, ¾ ÷ ½, answered two ways: by mimicking a memorized procedure and by sense-making.</figcaption>
+      <p class="work__label">Same problem, two students</p>
+      <p class="work__problem">¾ ÷ ½ = ?</p>
+      <div class="work__answer work__answer--mimic">
+        <p class="work__who">Mimicking</p>
+        <p>“Keep, change, flip. ¾ × 2 = 6/4 = 1½.”</p>
+        {% include note.html text="right answer, but why?" %}
+      </div>
+      <div class="work__answer work__answer--sense">
+        <p class="work__who">Sense-making</p>
+        <p>“How many halves fit in ¾? One whole half, with ¼ left over. That ¼ is half of another half. So 1½.”</p>
+        {% include note.html text="that's sense-making" %}
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="band band--grid" aria-labelledby="familiar-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The problem</p>
+      <h2 id="familiar-title">Sound familiar?</h2>
+    </div>
+    <div class="cards">
+      <div class="card card--moment">
+        <p>They ace the worksheet. Then the test changes one number, and they're lost.</p>
+      </div>
+      <div class="card card--moment">
+        <p>“Just tell me the steps.” You hear it every single day.</p>
+      </div>
+      <div class="card card--moment">
+        <p>They can flip and multiply. Ask why it works, and the room goes quiet.</p>
+      </div>
+    </div>
+    <p class="note-row">{% include note.html text="that's math mimicking" %}</p>
+  </div>
+</section>
+
+<section class="band band--white" aria-labelledby="habit-title">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">It's a habit, not a failing</p>
+      <h2 id="habit-title">Two sides of the same habit</h2>
+    </div>
+    <div class="prose">
+      <p>Most of us learned math by watching someone show the steps, then copying them. So that's how we teach: I do, we do, you do.</p>
+      <p>Students get very good at following along. The understanding never gets built. That's math mimicking: an imitation-based teaching habit on one side, and students who can reproduce procedures without knowing why they work on the other.</p>
+      <p>None of this is a teacher problem. It's a habit almost all of us inherited, and habits can change.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--grid" aria-labelledby="shift-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The shift</p>
+      <h2 id="shift-title">From mimicking to sense-making</h2>
+      <p class="lede muted">Students who understand <em>why</em> remember <em>how</em>. Here's what changes.</p>
+    </div>
+    <div class="shift">
+      <div class="shift__head" aria-hidden="true"><span>Mimicking</span><span></span><span>Sense-making</span></div>
+      <div class="shift__row"><div class="shift__from">Copy the teacher's steps</div><div class="shift__arrow" aria-hidden="true">→</div><div class="shift__to"><span class="sr-only">becomes: </span>Ask why the steps work</div></div>
+      <div class="shift__row"><div class="shift__from">One right method</div><div class="shift__arrow" aria-hidden="true">→</div><div class="shift__to"><span class="sr-only">becomes: </span>Many strategies, compared and connected</div></div>
+      <div class="shift__row"><div class="shift__from">Getting the answer</div><div class="shift__arrow" aria-hidden="true">→</div><div class="shift__to"><span class="sr-only">becomes: </span>Explaining the reasoning</div></div>
+      <div class="shift__row"><div class="shift__from">The teacher does the thinking</div><div class="shift__arrow" aria-hidden="true">→</div><div class="shift__to"><span class="sr-only">becomes: </span>Students do the thinking</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--white" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title">Support for one classroom or a whole district</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Workshops</h3>
+        <p>Professional learning for math teams. Teachers leave with routines they can use the next morning.</p>
+        <a class="card__more" href="{{ '/workshops/' | relative_url }}">See workshops →</a>
+      </div>
+      <div class="card">
+        <h3>Coaching</h3>
+        <p>Ongoing support for teachers, teams, and math coaches, in planning and in the classroom.</p>
+        <a class="card__more" href="{{ '/workshops/' | relative_url }}">See coaching →</a>
+      </div>
+      <div class="card">
+        <h3>Resources</h3>
+        <p>Short reads and the free email series now, with courses and classroom materials on the way.</p>
+        <a class="card__more" href="{{ '/resources/' | relative_url }}">Browse resources →</a>
+      </div>
+    </div>
+
+    <ul class="pillars">
+      <li><h3>Ready for tomorrow</h3><p>Every idea comes with a move you can try in your next lesson.</p></li>
+      <li><h3>Classroom-tested</h3><p>Built in real classrooms, not in theory alone.</p></li>
+      <li><h3>Research-grounded</h3><p>Rooted in math education research, written for busy teachers.</p></li>
+      <li><h3>Built to scale</h3><p>Works for one teacher, a whole school, or a district.</p></li>
+    </ul>
+  </div>
+</section>
+
+{% include testimonials.html %}
+
+{% include signup.html %}

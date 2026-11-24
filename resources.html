@@ -1,0 +1,27 @@
+---
+layout: page
+title: Resources
+eyebrow: Resources
+heading: Ideas you can use tomorrow
+intro: Short reads on moving your classroom from mimicking to sense-making.
+permalink: /resources/
+---
+<section class="band band--grid" aria-label="Articles">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li class="card">
+        <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
+        <h2 class="h3"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="lede">The first articles are on their way.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% include signup.html %}

@@ -1,0 +1,36 @@
+---
+layout: page
+title: Contact
+eyebrow: Contact
+heading: Let's talk about your math classrooms
+intro: Workshops, coaching, and school or district partnerships all start with a conversation.
+permalink: /contact/
+---
+<section class="band band--grid" aria-labelledby="contact-title">
+  <div class="container split">
+    <div class="prose">
+      <h2>What to include</h2>
+      <p>A few details help shape a useful first conversation:</p>
+      <ul class="checks">
+        <li>Your school or district, and your role</li>
+        <li>The grade levels you're thinking about</li>
+        <li>What you're seeing in math classrooms right now</li>
+        <li>What you're hoping for: a workshop, coaching, or something bigger</li>
+        <li>Any timing, like an upcoming PD day</li>
+      </ul>
+    </div>
+    <div class="contact-panel">
+      <h2 id="contact-title">Get in touch</h2>
+      {% if site.contact_email and site.contact_email != "" %}
+      <p>Email Amanda directly and you'll hear back soon.</p>
+      <p><a class="btn btn--yellow" href="mailto:{{ site.contact_email }}?subject=Stop%20Math%20Mimicking%20inquiry">Email {{ site.contact_email }}</a></p>
+      {% else %}
+      <p>Direct contact details are on their way.{% if site.links.linkedin and site.links.linkedin != "" %} For now, the fastest way to reach Amanda is on LinkedIn.{% endif %}</p>
+      {% if site.links.linkedin and site.links.linkedin != "" %}
+      <p><a class="btn btn--yellow" href="{{ site.links.linkedin }}" rel="noopener">Message on LinkedIn</a></p>
+      {% endif %}
+      {% endif %}
+      <p>{% include note.html text="a quick note is plenty" tone="lilac" %}</p>
+    </div>
+  </div>
+</section>

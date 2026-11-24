@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section class="band band--plum page-hero">
+  <div class="container">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1>{{ page.heading | default: page.title }}</h1>
+    {% if page.intro %}<p class="lede">{{ page.intro }}</p>{% endif %}
+  </div>
+</section>
+{{ content }}
